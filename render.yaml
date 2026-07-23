@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: kuru-intel-dashboard
+    runtime: docker
+    dockerfilePath: ./kuru-intel-dashboard/Dockerfile
+    dockerContext: ./kuru-intel-dashboard
+    envVars:
+      - key: PORT
+        value: 10000

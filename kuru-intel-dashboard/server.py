@@ -312,8 +312,10 @@ def create_app():
 
 
 if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 8080))
     print("[+] Kuru DEX Intelligence Dashboard")
     print("[+] Connecting to wss://ws.kuru.io (no auth)...")
-    print("[+] Dashboard at http://localhost:8080")
+    print(f"[+] Dashboard at http://0.0.0.0:{port}")
     app = create_app()
-    web.run_app(app, port=8080)
+    web.run_app(app, host="0.0.0.0", port=port)
