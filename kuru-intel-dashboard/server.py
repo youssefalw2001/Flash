@@ -305,7 +305,9 @@ def create_app():
     app = web.Application()
     app.router.add_get("/", handle_index)
     app.router.add_get("/api/state", handle_state)
-    app.router.add_static("/static", Path(__file__).parent / "static")
+    static_dir = Path(__file__).parent / "static"
+    if static_dir.exists() and any(static_dir.iterdir()):
+        app.router.add_static("/static", static_dir)
     app.on_startup.append(start_background_tasks)
     app.on_cleanup.append(cleanup_background_tasks)
     return app
