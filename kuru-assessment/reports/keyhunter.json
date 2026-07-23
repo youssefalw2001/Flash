@@ -1,0 +1,384 @@
+{
+  "https://kuru.io": [
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x2bce...cecf",
+      "address": "0xE0cc1e3Aa8E9a57AD6A59cdc773Ab9b072E92e0e",
+      "source": "https://www.kuru.io/_next/static/chunks/04aec68b-ae87e6ae56833f81.js",
+      "context": "t:(0,eL.S)((0,eD.h)((0,eM.m)(\"address\"),[T])),bytecodeHash:\"0x2bce2127ff07fb632d16c8347c4ebf501f4841168bed00d9e6ef715ddb6fcecf\"})):void 0,eY=!!eq&&h.toLowerCase()===eq.toLowerCase(),ej=(",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x8010...8010",
+      "address": "0x8A8746aB9aFf7939d15963bAc3371fb8beC175E4",
+      "source": "https://www.kuru.io/_next/static/chunks/5745-b7bb349794c10557.js",
+      "context": "s to, bytes data\");function w(e){if(\"string\"==typeof e){if(\"0x8010801080108010801080108010801080108010801080108010801080108010\"!==a.di(e,-32))throw new x(e)}else l(e.authorization)}class",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0xe06a...0ef7",
+      "address": "0x36AC07969dc227D837Df80dD58ba46fa50BcB864",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "cts/contracts/token/ERC20/IERC20.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0xe06a3f08a987af6ad2e1c1e774405d4fe08f1694b67517438b467cecf0da0ef7\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://df6f0c4",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x70f2...b330",
+      "address": "0x695Fff633A37bb8673be151B2CF17281161880D0",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "/ERC20/extensions/IERC20Metadata.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x70f2f713b13b7ce4610bcd0ac9fec0f3cc43693b043abcb8dc40a42a726eb330\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://c13d133",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0xc208...b9a3",
+      "address": "0x21243Ad71dC99794c80d7C152709656Ded62300c",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "},\\\\\"lib/solady/src/auth/Ownable.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0xc208cdd9de02bbf4b5edad18b88e23a2be7ff56d2287d5649329dc7cda64b9a3\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://e8fba07",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x1982...54ac",
+      "address": "0x1B876918C372b98123b4f8FFdCC04d26C5235385",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "},\\\\\"lib/solady/src/tokens/ERC20.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x19826a737039994947e9971d996e80c658f3c380705e30e7d1b5c40d35f454ac\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://d263a51",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0xc54c...734b",
+      "address": "0x02CADf0eB75a55E23DbE2Ce0DdA467E2eDD2622f",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "ady/src/utils/CallContextChecker.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0xc54c743a03f4909826712e9c6b683ca95e8b0c120c55284a9e3572621ebd734b\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://3d31380",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x1ed8...a90f",
+      "address": "0x8ED118adf310048233f0CD367d70aC252D38E44D",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "lady/src/utils/FixedPointMathLib.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x1ed875fc4a88beb012f15cbe111e69b402517adda61e5da88c55c73faf76a90f\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://ce07f2e",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x58ee...1fe4",
+      "address": "0xE0D9b70917B34a5f933C8fa2694a21b82a2cAc38",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "b/solady/src/utils/Initializable.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x58ee7b2e966232ca1ca9e9e705d8afcefa83fe29d37d6f8361d73015a9db1fe4\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://59f134c",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x21b2...d7eb",
+      "address": "0xda7510EA7cEf24B36a2351E72EBcEa973dbeB610",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "c/utils/ReentrancyGuardTransient.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x21b2e5cba720b937bd97897bf355b889442494c8ad5932f8e5a11beb0dc1d7eb\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://78cc5d5",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x960d...a817",
+      "address": "0x7678B21418771ba7dd6E276FC1b5033Bab021c4A",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "solady/src/utils/SafeTransferLib.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x960d5b7ca568a090c4a7785ddfd88f6ce135ced94f5c79c34e5519a71772a817\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://b2dd81d",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x6389...e361",
+      "address": "0x5E48E5795297c40e44069c1F7311DF08B843eB2E",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "solady/src/utils/UUPSUpgradeable.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x63899eaf1a24713464b8084ada33a83c4b7db789fe83ae22f016e39646bee361\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://617fa73",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x43fa...cd7d",
+      "address": "0xC7E5e10dAf5C3E845399f1bEF8B2B0a4392C46FC",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "gF7wWYamYy8aaE\\\\\"]},\\\\\"src/Vault.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x43fa06b3e69a243fd8efdebf49754b740046eda57abd17ed683e38156c18cd7d\\\\\",\\\\\"license\\\\\":\\\\\"UNLICENSED\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x8eb2...9f3e",
+      "address": "0x21F28228939E675A3AAE6d5D160009D279c88FD7",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "c/interfaces/IKuruFlowEntrypoint.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x8eb2a376af4571bd62b660810c2b676d74c52c68946af8f9297e59cf92ed9f3e\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://9f25e24",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x9fea...d4b4",
+      "address": "0xEc1FC044B0b1119b3E8B43c900263232f12e5D27",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "\\\\\"src/interfaces/IMarginAccount.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x9feaa82e56aff6338bb65ce91ad305bf11963de2ec1a1820c330e2be1a45d4b4\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://7b82f9b",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x3c91...941f",
+      "address": "0xA591Eaf8afbEcf505A85bf584E85a5D823445a23",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "\"]},\\\\\"src/interfaces/IOrderBook.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x3c912cb071d05a2f2f1620a489b4a9af1b59839c087a4e1e164bb2cedc79941f\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://e2c592f",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x1c34...ba9e",
+      "address": "0x51dbccc09D93D5d8Ec2055C5d6FA8651b7333022",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "5k\\\\\"]},\\\\\"src/interfaces/IVault.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x1c34ea5ff840fab205ff54135e2332d2914a8116e6b8d9da3261e07ab771ba9e\\\\\",\\\\\"license\\\\\":\\\\\"UNLICENSED\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x0f2b...7948",
+      "address": "0xf391fe76ac295041b6F2E6A08C405D0c6b1982fa",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "]},\\\\\"src/libraries/EventsErrors.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x0f2be5b38c7101820bdbdbb3ebc351387d1e75f0e58e2425c354c55799787948\\\\\",\\\\\"license\\\\\":\\\\\"UNLICENSED\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x456a...9732",
+      "address": "0x66b761E8d980d50C0767684ea20F9aDa428690FB",
+      "source": "https://www.kuru.io/_next/static/chunks/d80a46d4-c0a286fe25ace645.js",
+      "context": "\\\\\"src/libraries/LiquidityShares.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x456abce49957273935cb6fca6c03cd2674a888bcfa08030708b0a5c441169732\\\\\",\\\\\"license\\\\\":\\\\\"UNLICENSED\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x679e...999a",
+      "address": "0x11D5Ef4C9b5b83D6B1C98Fe7cC49f4CBBF050D51",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "es\\\\\":{\\\\\"contracts/KuruAMMVault.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x679e7662bfbf1fd20489a3d7daf6e4808372fe8716db92f854a99c20dda5999a\\\\\",\\\\\"license\\\\\":\\\\\"BUSL-1.1\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://8a",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x8861...6fc0",
+      "address": "0xCda9259Cc202Cb894c8331Ac16F21f5e8Ca90CDd",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "ntracts/interfaces/IKuruAMMVault.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x88612e1a5c5b8eb22308df602a860639b41b169106992dd03a54176702896fc0\\\\\",\\\\\"license\\\\\":\\\\\"GPL-2.0-or-later\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x4d51...dae2",
+      "address": "0xD5f74ECDeb7167F6Ce941f726D5BdC04639Dc46F",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "tracts/interfaces/IMarginAccount.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x4d51b3fa3b47a785aa41cdfde103b9334780e927e1d3d5fbb0caa97a455fdae2\\\\\",\\\\\"license\\\\\":\\\\\"GPL-2.0-or-later\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0xeb1e...edc3",
+      "address": "0xb1f50AfDb0E87417d8D9FEAe3975bf6E2319b6BA",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "\"contracts/interfaces/IOrderBook.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0xeb1e2cc68bc64b2fb5986cf1d5f4a243c607f756eb956239ce8445469d6bedc3\\\\\",\\\\\"license\\\\\":\\\\\"GPL-2.0-or-later\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0xffb5...d237",
+      "address": "0x7FC1Ae782d4CfCa261f0947d9aBCAc577476062a",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "]},\\\\\"contracts/libraries/Errors.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0xffb59254341a0ff6d8408a903114e91bf4e264f1d950f07ccc0a03f9b164d237\\\\\",\\\\\"license\\\\\":\\\\\"BUSL-1.1\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://8d",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x90a5...bebd",
+      "address": "0x92E1bF774eB6f7C14006679753Ec02BD2Bb96406",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "acts/libraries/FixedPointMathLib.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x90a5a4d76dd7cdbf8ee357bd0cb963ad5fb2f3d58444f213872f0e7e23ffbebd\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://99f2d78",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0xe56f...c5a3",
+      "address": "0x9aE3Cdb1f3D14814f1C2Cbf9B4C6C1D0Cd650a33",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "s/utils/ReentrancyGuardTransient.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0xe56ff5015046505f81f9d62671a784e933dd099db4c3a8fa8de598f20af2c5a3\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://3558633",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0xac67...c946",
+      "address": "0x46287A33679e08DF8A817c046EC6F764AfD309A5",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "ts/contracts/utils/TransientSlot.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0xac673fa1e374d9e6107504af363333e3e5f6344d2e83faf57d9bfd41d77cc946\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://5982478",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x1982...54ac",
+      "address": "0x1B876918C372b98123b4f8FFdCC04d26C5235385",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "_modules/solady/src/tokens/ERC20.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x19826a737039994947e9971d996e80c658f3c380705e30e7d1b5c40d35f454ac\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://d263a51",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0xc54c...734b",
+      "address": "0x02CADf0eB75a55E23DbE2Ce0DdA467E2eDD2622f",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "ady/src/utils/CallContextChecker.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0xc54c743a03f4909826712e9c6b683ca95e8b0c120c55284a9e3572621ebd734b\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://3d31380",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x58ee...1fe4",
+      "address": "0xE0D9b70917B34a5f933C8fa2694a21b82a2cAc38",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "s/solady/src/utils/Initializable.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x58ee7b2e966232ca1ca9e9e705d8afcefa83fe29d37d6f8361d73015a9db1fe4\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://59f134c",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0xf53a...2f7a",
+      "address": "0xf641b67fC3847B3730A42d685D05fAaA5015C3B3",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "solady/src/utils/SafeTransferLib.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0xf53a25143307304d9de7186f93f11faae3cc4f722c4b088aed6f4f8f87a02f7a\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://b722c08",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x6389...e361",
+      "address": "0x5E48E5795297c40e44069c1F7311DF08B843eB2E",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "solady/src/utils/UUPSUpgradeable.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x63899eaf1a24713464b8084ada33a83c4b7db789fe83ae22f016e39646bee361\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://617fa73",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0xb69d...d531",
+      "address": "0x1B512e3ba24C5C6c42A2f70477730c8EFe253b08",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "s\\\\\":{\\\\\"contracts/MarginAccount.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0xb69d9338871f32817930c75efb6d467ef6ea95e52af8dd05f1be449595b0d531\\\\\",\\\\\"license\\\\\":\\\\\"BUSL-1.1\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://08",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x7458...1ef5",
+      "address": "0x4D0Bc6d4fB07b431085B727fF435DEb97356f6C6",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "ntracts/libraries/ERC2771Context.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0x7458e7a07eb42f479dd6a547733373f21d7a45e0d9a78d545e16db6639e61ef5\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://8d278e5",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0xc208...b9a3",
+      "address": "0x21243Ad71dC99794c80d7C152709656Ded62300c",
+      "source": "https://www.kuru.io/_next/static/chunks/1791-2c3b9184434a05fd.js",
+      "context": "_modules/solady/src/auth/Ownable.sol\\\\\":{\\\\\"keccak256\\\\\":\\\\\"0xc208cdd9de02bbf4b5edad18b88e23a2be7ff56d2287d5649329dc7cda64b9a3\\\\\",\\\\\"license\\\\\":\\\\\"MIT\\\\\",\\\\\"urls\\\\\":[\\\\\"bzz-raw://e8fba07",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x3c8a...de60",
+      "address": "0xD61D3b7b7DD521b75b4edf080ff50Baf3073F1d4",
+      "source": "https://www.kuru.io/_next/static/chunks/7225-2129a38ca6a85a96.js",
+      "context": "ce(/([A-Z])/g,\" $1\").toLowerCase().substring(1).split(\" \"),\"0x3c8acc1e7b08d8e76f9fda015ef48dc8c710a73cb7e0f77b2c18a9b5a7adde60\"!==y.check(e)))throw v=null,Error(\"BIP39 Wordlist for en (E",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x8000...0000",
+      "address": "0xa71E43Be339F9791235641F457c1Ba2DA86b9Eb3",
+      "source": "https://www.kuru.io/_next/static/chunks/7225-2129a38ca6a85a96.js",
+      "context": "ffffffffffffffffffffffffffffffffffffffffffffff\"),M=S.from(\"-0x8000000000000000000000000000000000000000000000000000000000000000\"),U=S.from(\"0x7ffffffffffffffffffffffffffffffffffffffffffff",
+      "activity": {},
+      "notes": null
+    },
+    {
+      "kind": "evm_hex",
+      "confidence": "crypto_valid",
+      "value_preview": "0x7fff...ffff",
+      "address": "0xf6daFD57f591533B18fea73D6d8118F825598679",
+      "source": "https://www.kuru.io/_next/static/chunks/7225-2129a38ca6a85a96.js",
+      "context": "00000000000000000000000000000000000000000000000\"),U=S.from(\"0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\")},97100:(e,t,n)=>{\"use strict\";n.d(t,{W:()=>l});var i=n(92",
+      "activity": {},
+      "notes": null
+    }
+  ]
+}

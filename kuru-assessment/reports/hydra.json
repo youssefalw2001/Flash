@@ -1,0 +1,61 @@
+{
+  "tool": "hydra",
+  "target": "https://kuru.io",
+  "stats": {
+    "discovery": {
+      "cdns_detected": [
+        "cloudflare",
+        "vercel"
+      ],
+      "endpoints_probed": 2,
+      "notes": [
+        "CDN(s) detected: cloudflare, vercel"
+      ]
+    },
+    "counts": {
+      "INFO": 1,
+      "LOW": 0,
+      "MEDIUM": 0,
+      "HIGH": 0,
+      "CRITICAL": 0,
+      "TOTAL": 1
+    }
+  },
+  "findings": [
+    {
+      "tool": "hydra",
+      "module": "discovery",
+      "title": "CDN/cache layer(s) detected: cloudflare, vercel",
+      "severity": "INFO",
+      "target": "https://kuru.io",
+      "evidence": {
+        "cdns": [
+          "cloudflare",
+          "vercel"
+        ],
+        "baseline_headers": {
+          "Date": "Thu, 23 Jul 2026 06:53:24 GMT",
+          "Content-Type": "text/html",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Cache-Control": "public, max-age=5, must-revalidate",
+          "Location": "https://www.kuru.io/",
+          "refresh": "0;url=https://www.kuru.io/",
+          "Server": "cloudflare",
+          "strict-transport-security": "max-age=63072000",
+          "x-vercel-id": "iad1::7x8fg-1784789604786-675aba106b2a",
+          "cf-cache-status": "EXPIRED",
+          "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "Speculation-Rules": "\"/cdn-cgi/speculation\"",
+          "Vary": "accept-encoding",
+          "Server-Timing": "cfCacheStatus;desc=\"EXPIRED\"",
+          "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=IOs5A5O80ztNkCVhWgiEzQ0nV2Vk3MmVDSvGFYECfUvucxaPxmWGI4fqHapJYSDdGujNp03Aii%2F2MkecY7UKJmeFXCReRzrTcbDrz7%2B9kurPkl8OgapI1e4%3D\"}]}",
+          "CF-RAY": "a1f8c495dd4f5767-IAD",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        }
+      },
+      "reproduction": "",
+      "remediation": ""
+    }
+  ]
+}

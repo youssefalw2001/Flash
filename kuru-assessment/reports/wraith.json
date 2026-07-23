@@ -1,0 +1,20 @@
+{
+  "tool": "wraith",
+  "target": "https://api.kuru.io",
+  "stats": {
+    "endpoints_total": 48,
+    "endpoints_auth_gated": 1,
+    "mutations": 93,
+    "probes_run": 93,
+    "errors": 0,
+    "counts": {
+      "INFO": 0,
+      "LOW": 0,
+      "MEDIUM": 0,
+      "HIGH": 0,
+      "CRITICAL": 0,
+      "TOTAL": 0
+    }
+  },
+  "findings": []
+}
