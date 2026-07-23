@@ -185,6 +185,17 @@ async def ws_collector():
                             elif event_type == "Trade":
                                 maker["fills"] += 1
 
+                            # Log to events feed
+                            if event_type in ("OrderCreated", "OrderCancelled", "OrderCanceled", "Trade"):
+                                state["events_log"].append({
+                                    "time": now,
+                                    "maker": maker_addr[:12],
+                                    "type": event_type,
+                                    "market": "MON/USDC",
+                                })
+                                if len(state["events_log"]) > 200:
+                                    state["events_log"] = state["events_log"][-200:]
+
                             # Compute derived stats
                             uptime = now - maker["first_seen"]
                             if uptime > 0 and maker["orders_placed"] > 2:
